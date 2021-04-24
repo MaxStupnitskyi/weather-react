@@ -1,0 +1,65 @@
+.sidebar
+    width: 20%
+    backdrop-filter: blur(10px)
+    background-color: rgba(255, 255, 255, .25)
+    position: relative
+    z-index: 1
+    padding-bottom: 20px
+
+    &__search
+        margin-bottom: 14px
+        padding: 10px 0
+
+        &__input
+            background-color: transparent
+            width: 100%
+            border: none
+            border-bottom: 1px solid #fff
+            height: 47px
+            color: #fff
+            text-shadow: 1px 1px 1px #313131
+            padding: 3px 6px
+
+            &::placeholder
+                color: #fff
+                text-shadow: 1px 1px 1px #313131
+
+@media (max-width: 1023px)
+
+    .sidebar
+        width: 30%
+
+    .city
+
+        &__title
+            font-size: 0.9rem
+
+        &__temp
+            font-size: 1.1rem
+
+@media (max-width: 767px)
+
+    .sidebar
+        position: fixed
+        top: 0
+        left: -40%
+        z-index: 2
+        height: 100vh
+        overflow-y: auto
+        width: 40%
+        transition: all 0.3s ease
+
+        &.visible
+            left: 0
+
+@media (max-width: 500px)
+
+    .sidebar
+        width: 60%
+        left: -60%
+
+@media (max-width: 390px)
+
+    .sidebar
+        width: 80%
+        left: -80%

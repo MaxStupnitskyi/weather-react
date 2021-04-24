@@ -1,0 +1,147 @@
+.content
+    width: 80%
+    flex-basis: 80%
+    position: relative
+    z-index: 1
+    padding: 50px 0
+
+.weather
+    backdrop-filter: blur(10px)
+    background-color: rgba(255, 255, 255, .25)
+    border-radius: 20px
+    max-width: 80%
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding: 3rem 4rem
+    margin: 0 auto
+    color: #fff
+    text-shadow: 1px 1px 2px #000
+
+    &:not(:last-child)
+        margin-bottom: 50px
+
+    &__hello
+        text-align: center
+        width: 100%
+        font-size: 1.5rem
+
+    &__city
+        font-weight: 500
+        margin: 0 0 10px
+        font-size: 1.5rem
+
+    &__temp
+        font-weight: 700
+        font-size: 5rem
+
+    &__day-temp
+        text-align: center
+    
+    &__date
+        font-weight: 200
+
+.today
+
+    &__item
+        flex: 1 1 0
+
+        &__title
+            font-weight: 300
+
+        &__value
+            font-size: 1.2rem
+            font-weight: 500
+            display: flex
+            align-items: center
+
+.wind-icon
+    width: 16px
+    height: 16px
+    transform-origin: center
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, .9))
+    margin-top: -4px
+    position: relative
+
+    &__wrap
+        width: 20px
+        margin-right: 3px
+
+@media (max-width: 1023px)
+
+    .content
+        width: 70%
+
+    .weather
+        margin: 0 40px
+        padding: 2rem 2.6rem
+
+        &__temp
+            font-size: 3rem
+
+        &__city
+            font-size: 1.3rem
+
+        &__status
+
+            .icon
+                width: 70px
+                height: 70px
+
+                img
+                    width: 100%
+
+    .today
+
+        &__item
+
+            &__value
+                font-size: 0.9rem
+                margin-top: 4px
+
+@media (max-width: 767px)
+
+    .content
+        width: 100%
+        padding: 80px 0
+
+    .weather
+
+        &__hello
+            font-size: 1.3rem
+
+@media (max-width: 500px)
+
+    .weather
+        padding: 1.4rem 1.7rem
+
+    .today
+        flex-wrap: wrap
+
+        &__item
+            width: 50%
+            flex: none
+
+            &:nth-child(1)
+                margin-bottom: 16px
+
+@media (max-width: 390px)
+
+    .weather
+        display: block
+        text-align: center
+
+        &__status
+
+            .icon
+                margin: 0 auto
+
+    .today
+
+        &__item
+            width: 100%
+            text-align: center
+            margin-bottom: 16px
+
+            &__value
+                justify-content: center
